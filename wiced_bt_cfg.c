@@ -75,20 +75,20 @@ const wiced_bt_cfg_settings_t wiced_bt_cfg_settings =
         /* Advertisement Scan Configuration */
         0x0000,                                                             /**< High Duty Scan Interval */
         0x0000,                                                             /**< High Duty Scan Window */
-        0,                                                                  /**< High Duty Scan Duration in seconds (0 for infinite) */
+        0,                                                                  /**< High Duty Scan Duration in seconds */
 
         0x0000,                                                             /**< Low Duty Scan Interval */
         0x0000,                                                             /**< Low Duty Scan Window */
-        0,                                                                  /**< Low Duty Scan Duration in seconds (0 for infinite) */
+        0,                                                                  /**< Low Duty Scan Duration in seconds */
 
         /* Connection Scan Configuration */
         0x0000,                                                             /**< High Duty Connection Cycle Connection Scan Interval */
         0x0000,                                                             /**< High Duty Connection Cycle Connection Scan Window */
-        0,                                                                  /**< High Duty Connection Cycle Connection Duration in seconds (0 for infinite) */
+        0,                                                                  /**< High Duty Connection Cycle Connection Duration in seconds */
 
         0x0000,                                                             /**< Low Duty Connection Cycle Connection Scan Interval */
         0x0000,                                                             /**< Low Duty Connection Cycle Connection Scan Window */
-        0,                                                                  /**< Low Duty Connection Cycle Connection Duration in seconds (0 for infinite) */
+        0,                                                                  /**< Low Duty Connection Cycle Connection Duration in seconds */
 
         /* Connection Configuration */
         WICED_BT_CFG_DEFAULT_CONN_MIN_INTERVAL,                             /**< Minimum Connection Interval */
@@ -103,26 +103,26 @@ const wiced_bt_cfg_settings_t wiced_bt_cfg_settings =
 
         0,                                                                  /**< High Duty Undirected Connectable Minimum Advertising Interval */
         0,                                                                  /**< High Duty Undirected Connectable Maximum Advertising Interval */
-        0,                                                                  /**< High Duty Undirected Connectable Advertising Duration in seconds (0 for infinite) */
+        0,                                                                  /**< High Duty Undirected Connectable Advertising Duration in seconds */
 
         0,                                                                  /**< Low Duty Undirected Connectable Minimum Advertising Interval */
         0,                                                                  /**< Low Duty Undirected Connectable Maximum Advertising Interval */
-        0,                                                                  /**< Low Duty Undirected Connectable Advertising Duration in seconds (0 for infinite) */
+        0,                                                                  /**< Low Duty Undirected Connectable Advertising Duration in seconds */
 
         0,                                                                  /**< High Duty Directed Minimum Advertising Interval */
         0,                                                                  /**< High Duty Directed Maximum Advertising Interval */
 
         0,                                                                  /**< Low Duty Directed Minimum Advertising Interval */
         0,                                                                  /**< Low Duty Directed Maximum Advertising Interval */
-        0,                                                                  /**< Low Duty Directed Advertising Duration in seconds (0 for infinite) */
+        0,                                                                  /**< Low Duty Directed Advertising Duration in seconds */
 
         0,                                                                  /**< High Duty Non-Connectable Minimum Advertising Interval */
         0,                                                                  /**< High Duty Non-Connectable Maximum Advertising Interval */
-        0,                                                                  /**< High Duty Non-Connectable Advertising Duration in seconds (0 for infinite) */
+        0,                                                                  /**< High Duty Non-Connectable Advertising Duration in seconds */
 
         0,                                                                  /**< Low Duty Non-Connectable Minimum Advertising Interval */
         0,                                                                  /**< Low Duty Non-Connectable Maximum Advertising Interval */
-        0,                                                                  /**< Low Duty Non-Connectable Advertising Duration in seconds (0 for infinite) */
+        0,                                                                  /**< Low Duty Non-Connectable Advertising Duration in seconds */
     },
 
     /* GATT Configuration */
@@ -176,7 +176,7 @@ const wiced_bt_cfg_settings_t wiced_bt_cfg_settings =
 #else
     6,                                                              /**< Maximum number of buffer pools in p_btm_cfg_buf_pools and by wiced_create_pool */
     WICED_BT_CFG_DEFAULT_RANDOM_ADDRESS_NEVER_CHANGE,               /**< Interval of  random address refreshing - secs */
-    0,                                                              /**< Maximum number of white list devices allowed. Cannot be more than 128 */
+    0,                                                              /**< Maximum number of Filter Accept List devices allowed. Cannot be more than 128 */
 #endif
 #if defined(CYW20719B2) || defined(CYW20721B2) || defined(CYW20819A1) || defined (CYW20820A1)
     0                                                               /**< Default LE power level, Refer lm_TxPwrTable table for the power range */

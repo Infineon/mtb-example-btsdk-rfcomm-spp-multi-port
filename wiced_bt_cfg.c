@@ -75,20 +75,20 @@ const wiced_bt_cfg_settings_t wiced_bt_cfg_settings =
         /* Advertisement Scan Configuration */
         0x0000,                                                             /**< High Duty Scan Interval */
         0x0000,                                                             /**< High Duty Scan Window */
-        0,                                                                  /**< High Duty Scan Duration in seconds */
+        0,                                                                  /**< High Duty Scan Duration in seconds (0 for infinite) */
 
         0x0000,                                                             /**< Low Duty Scan Interval */
         0x0000,                                                             /**< Low Duty Scan Window */
-        0,                                                                  /**< Low Duty Scan Duration in seconds */
+        0,                                                                  /**< Low Duty Scan Duration in seconds (0 for infinite) */
 
         /* Connection Scan Configuration */
         0x0000,                                                             /**< High Duty Connection Cycle Connection Scan Interval */
         0x0000,                                                             /**< High Duty Connection Cycle Connection Scan Window */
-        0,                                                                  /**< High Duty Connection Cycle Connection Duration in seconds */
+        0,                                                                  /**< High Duty Connection Cycle Connection Duration in seconds (0 for infinite) */
 
         0x0000,                                                             /**< Low Duty Connection Cycle Connection Scan Interval */
         0x0000,                                                             /**< Low Duty Connection Cycle Connection Scan Window */
-        0,                                                                  /**< Low Duty Connection Cycle Connection Duration in seconds */
+        0,                                                                  /**< Low Duty Connection Cycle Connection Duration in seconds (0 for infinite) */
 
         /* Connection Configuration */
         WICED_BT_CFG_DEFAULT_CONN_MIN_INTERVAL,                             /**< Minimum Connection Interval */
@@ -103,26 +103,26 @@ const wiced_bt_cfg_settings_t wiced_bt_cfg_settings =
 
         0,                                                                  /**< High Duty Undirected Connectable Minimum Advertising Interval */
         0,                                                                  /**< High Duty Undirected Connectable Maximum Advertising Interval */
-        0,                                                                  /**< High Duty Undirected Connectable Advertising Duration in seconds */
+        0,                                                                  /**< High Duty Undirected Connectable Advertising Duration in seconds (0 for infinite) */
 
         0,                                                                  /**< Low Duty Undirected Connectable Minimum Advertising Interval */
         0,                                                                  /**< Low Duty Undirected Connectable Maximum Advertising Interval */
-        0,                                                                  /**< Low Duty Undirected Connectable Advertising Duration in seconds */
+        0,                                                                  /**< Low Duty Undirected Connectable Advertising Duration in seconds (0 for infinite) */
 
         0,                                                                  /**< High Duty Directed Minimum Advertising Interval */
         0,                                                                  /**< High Duty Directed Maximum Advertising Interval */
 
         0,                                                                  /**< Low Duty Directed Minimum Advertising Interval */
         0,                                                                  /**< Low Duty Directed Maximum Advertising Interval */
-        0,                                                                  /**< Low Duty Directed Advertising Duration in seconds */
+        0,                                                                  /**< Low Duty Directed Advertising Duration in seconds (0 for infinite) */
 
         0,                                                                  /**< High Duty Non-Connectable Minimum Advertising Interval */
         0,                                                                  /**< High Duty Non-Connectable Maximum Advertising Interval */
-        0,                                                                  /**< High Duty Non-Connectable Advertising Duration in seconds */
+        0,                                                                  /**< High Duty Non-Connectable Advertising Duration in seconds (0 for infinite) */
 
         0,                                                                  /**< Low Duty Non-Connectable Minimum Advertising Interval */
         0,                                                                  /**< Low Duty Non-Connectable Maximum Advertising Interval */
-        0,                                                                  /**< Low Duty Non-Connectable Advertising Duration in seconds */
+        0,                                                                  /**< Low Duty Non-Connectable Advertising Duration in seconds (0 for infinite) */
     },
 
     /* GATT Configuration */

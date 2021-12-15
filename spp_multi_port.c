@@ -446,7 +446,7 @@ void spp_multi_port_write_eir(void)
     eir_length = (uint16_t) (p - pBuf);
 
     // print EIR data
-    wiced_bt_trace_array("EIR :", pBuf, MIN(p-pBuf, 100));
+    WICED_BT_TRACE_ARRAY(pBuf, MIN(p-pBuf, 100), "EIR :");
     wiced_bt_dev_write_eir(pBuf, eir_length);
 }
 
@@ -473,12 +473,8 @@ void spp_multi_port_timeout(uint32_t count)
 
 void spp_multi_port_init_timer(void)
 {
-    if (wiced_init_timer(&spp_multi_port_app_timer, &spp_multi_port_timeout, 0, WICED_SECONDS_PERIODIC_TIMER) == WICED_SUCCESS)
-    {
-        if (wiced_start_timer(&spp_multi_port_app_timer, 1) !=  WICED_SUCCESS)
-        {
-        }
-    }
+    wiced_init_timer(&spp_multi_port_app_timer, &spp_multi_port_timeout, 0, WICED_SECONDS_PERIODIC_TIMER);
+    wiced_start_timer(&spp_multi_port_app_timer, 1);
 }
 
 

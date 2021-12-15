@@ -114,7 +114,6 @@ void hci_spp_init()
 void hci_spp_handle_command(uint16_t cmd_opcode, uint8_t* p, uint32_t data_len)
 {
     uint16_t handle;
-    wiced_result_t result = WICED_BT_ERROR;
 
     switch (cmd_opcode)
     {
@@ -161,8 +160,7 @@ void hci_spp_handle_command(uint16_t cmd_opcode, uint8_t* p, uint32_t data_len)
         {
             spp_ota_flow_controlled = WICED_TRUE;
             spp_pending_tx_handle = handle;
-            result  = wiced_start_timer(&spp_ota_flow_control_timer, 50);
-            WICED_BT_TRACE("hci_spp_handle_command wiced_start_timer result - %d \n", result);
+            wiced_start_timer(&spp_ota_flow_control_timer, 50);
             spp_tx_retry_count = 0;
         }
         break;

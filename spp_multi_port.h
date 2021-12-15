@@ -68,7 +68,6 @@ void hci_spp_init();
 void hci_spp_handle_command(uint16_t cmd_opcode, uint8_t* p, uint32_t data_len);
 void hci_spp_disconnect(BD_ADDR bda);
 
-extern void wiced_bt_trace_array( const char *string, const uint8_t* array, const uint16_t len );
 extern void wiced_bt_spp_rx_flow_enable(uint16_t handle, wiced_bool_t enable);
 
 #endif

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021, Cypress Semiconductor Corporation (an Infineon company) or
+ * Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
  * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
  *
  * This software, including source code, documentation and related
@@ -326,8 +326,13 @@ wiced_bool_t spp_rx_data_callback(uint16_t handle, uint8_t* p_data, uint32_t dat
             p_trans_buf[1] = (handle >> 8) & 0x0ff;
 
             memcpy(&p_trans_buf[2], p_data, data_len);
-            if(wiced_transport_send_buffer(HCI_CONTROL_SPP_EVENT_RX_DATA, p_trans_buf, data_len + 2) != WICED_SUCCESS)
+            if (wiced_transport_send_buffer(HCI_CONTROL_SPP_EVENT_RX_DATA, p_trans_buf, data_len + 2) != WICED_SUCCESS)
+            {
                 WICED_BT_TRACE("wiced_transport_send_buffer failed length %d\n", data_len + 2);
+#if !defined(CYW20706A2)
+                wiced_transport_free_buffer(p_trans_buf);
+#endif
+            }
 
             if ((num_buffers_left = wiced_transport_get_buffer_count(host_trans_pool)) < (TRANS_MAX_BUFFERS / 2))
             {

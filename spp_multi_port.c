@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2022, Cypress Semiconductor Corporation (an Infineon company) or
+ * Copyright 2016-2023, Cypress Semiconductor Corporation (an Infineon company) or
  * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
  *
  * This software, including source code, documentation and related
@@ -53,8 +53,8 @@
  * 3. Enable Discoverability and Connectability via ClientContol
  * 4. Use the computer's 'Add a Bluetooth Device' menu to pair with spp_multi_port app. That should
  *    create an incoming and outgoing COM ports on your computer, see 'More Bluetooth options'
- * 5. Use application such as Tera Term to open the BT COM port
- * 6. Use a BT SPP test app on your smart phone to connect to the 2nd SPP port
+ * 5. Use application such as Tera Term to open the Bluetooth COM port
+ * 6. Use a Bluetooth SPP test app on your smart phone to connect to the 2nd SPP port
  * 7. You can use ClientControl to send data you input via the GUI or specify send from file. You can
  *    select between the two devices using the device drop down menu in ClientContol
  * 8. Type any keys on the terminal of the outgoing COM port, the spp application will receive the keys.
@@ -228,9 +228,9 @@ extern wiced_result_t wiced_bt_app_init( void );
  ******************************************************************/
 
 /*
- * Entry point to the application. Set device configuration and start BT
+ * Entry point to the application. Set device configuration and start Bluetooth
  * stack initialization.  The actual application initialization will happen
- * when stack reports that BT device is ready
+ * when stack reports that Bluetooth device is ready
  */
 APPLICATION_START()
 {
@@ -271,7 +271,7 @@ APPLICATION_START()
 }
 
 /*
- * application initialization is executed after BT stack initialization is completed.
+ * application initialization is executed after Bluetooth stack initialization is completed.
  */
 void application_init(void)
 {
@@ -296,7 +296,7 @@ void application_init(void)
 
 #ifdef HCI_TRACE_OVER_TRANSPORT
     // There is a virtual HCI interface between upper layers of the stack and
-    // the controller portion of the chip with lower layers of the BT stack.
+    // the controller portion of the chip with lower layers of the Bluetooth stack.
     // Register with the stack to receive all HCI commands, events and data.
     wiced_bt_dev_register_hci_trace(spp_multi_port_hci_trace_cback);
 #endif
